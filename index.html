@@ -21,7 +21,7 @@
 	</style>
 </head>
 <body class="lock-screen" >
-<div id="messageq1">
+<div >
   The values stored were
   <span></span>
   and
@@ -49,7 +49,7 @@
 </body>
 
 <script>
-var div = $( "#message1")
+var div = $( "div" )[ 0 ];
 jQuery.data( div, "test", {
   first: 16,
   last: "pizza!"
