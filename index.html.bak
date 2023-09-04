@@ -29,15 +29,35 @@
 		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
 	</div><!-- /header -->
-
+	<div>
+  The values stored were
+  <span></span>
+  and
+  <span></span>
+</div>
+ 
+<div ><p id="message"></p></div>
 	<div role="main" class="ui-content jqm-content">
 
 		<h1>Input buttons</h1>
 
 		<p>Examples of how to style input buttons; <code>input</code> elements with <code>type="button"</code>, <code>type="submit"</code>, or <code>type="reset"</code>. See <a href="button-markup/">button markup</a> for examples of <code>a</code> and <code>button</code> elements.</p>
 		<iframe src="https://openprocessing.org/sketch/1993255" ></iframe>
-		<iframe src="https://scratch.mit.edu/projects/880374575/" ></iframe>
+		
 
 </body>
 
+<script>
+var div = $( "div" )[ 0 ];
+jQuery.data( div, "test", {
+  first: 16,
+  last: "pizza!"
+});
+$( "span" ).first().text( jQuery.data( div, "test" ).first );
+$( "span" ).last().text( jQuery.data( div, "test" ).last );
+</script>
+<script>
+jQuery.data( document.body, "foo", 52 );
+
+</script>
 </html>
