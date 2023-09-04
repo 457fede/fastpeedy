@@ -29,7 +29,7 @@
 		<a href="#" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left">Menu</a>
 		<a href="#" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-search ui-nodisc-icon ui-alt-icon ui-btn-right">Search</a>
 	</div><!-- /header -->
-	<div>
+	<div id="messageq1">
   The values stored were
   <span></span>
   and
@@ -48,7 +48,7 @@
 </body>
 
 <script>
-var div = $( "div" )[ 0 ];
+var div = $( "#message1")
 jQuery.data( div, "test", {
   first: 16,
   last: "pizza!"
