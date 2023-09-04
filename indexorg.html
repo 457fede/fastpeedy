@@ -11,6 +11,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/p5.min.js"></script>
 	<style>
 	.lock-screen {
     height: 100%;
@@ -21,19 +22,20 @@
 	</style>
 </head>
 <body class="lock-screen" >
-<div id=message>
+<div >
   The values stored were
   <span></span>
   and
   <span></span>
 </div>
- <iframe src="https://openprocessing.org/sketch/1993255" ></iframe>
-		
-
+ 
 </body>
 
 <script>
-var div = $( "#message");
+//<iframe src="https://openprocessing.org/sketch/1993255" ></iframe>
+		
+
+var div = $( "div" )[ 0 ];
 jQuery.data( div, "test", {
   first: 16,
   last: "pizza!"
