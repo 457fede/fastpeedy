@@ -8,9 +8,9 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/themes/drawc.css">
 	<link rel="stylesheet" href="css/jqm-demos.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/jquery.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
 	<style>
 	.lock-screen {
     height: 100%;
@@ -18,22 +18,29 @@
     width: 100%;
     position: fixed;
 }
-	</style>
+#ii{position:relative;
+  top:30px;
+  }
+</style>
 </head>
-<body class="lock-screen" >
-<div id=message>
+<body >
+<div >
   The values stored were
   <span></span>
   and
   <span></span>
 </div>
- <iframe src="https://openprocessing.org/sketch/1993255" ></iframe>
-		
 
-</body>
+
+<textarea id ="ii" rows=15 cols=30 ></textarea>
+<button type="button">Send</button></body>
 
 <script>
-var div = $( "#message");
+  /*  sketch.js
+https://openprocessing.org/sketch/1993255
+		
+*/
+var div = $( "div" )[ 0 ];
 jQuery.data( div, "test", {
   first: 16,
   last: "pizza!"

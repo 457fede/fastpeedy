@@ -8,9 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="css/themes/drawc.css">
 	<link rel="stylesheet" href="css/jqm-demos.css">
-		<script src="js/jquery.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/p5.min.js"></script>
 	<style>
 	.lock-screen {
     height: 100%;
@@ -18,28 +19,22 @@
     width: 100%;
     position: fixed;
 }
-#ii{position:relative;
-  top:30px;
-  }
-</style>
+	</style>
 </head>
-<body >
+<body class="lock-screen" >
 <div >
   The values stored were
   <span></span>
   and
   <span></span>
 </div>
-
-
-<textarea id ="ii" rows=15 cols=30 ></textarea>
-<button type="button">Click Me!</button></body>
+ 
+</body>
 
 <script>
-  /*  sketch.js
-https://openprocessing.org/sketch/1993255
+//<iframe src="https://openprocessing.org/sketch/1993255" ></iframe>
 		
-*/
+
 var div = $( "div" )[ 0 ];
 jQuery.data( div, "test", {
   first: 16,
@@ -48,6 +43,19 @@ jQuery.data( div, "test", {
 $( "span" ).first().text( jQuery.data( div, "test" ).first );
 $( "span" ).last().text( jQuery.data( div, "test" ).last );
 </script>
+<script>
+function setup() {
+  createCanvas(400, 400);
+}
 
+function draw() {
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
+}
+</script>
 
 </html>
